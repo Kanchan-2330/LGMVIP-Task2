@@ -70,10 +70,3 @@ button{
 .images{
     width:40%;
 }
-#loader {
-    display: none;
-  }
-  
-  #loader.show {
-    display: block;
-  }
