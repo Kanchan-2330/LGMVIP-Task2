@@ -1,14 +1,5 @@
-const loaderDiv = document.getElementById('loader');
 
-  function showLoader() {
-    loaderDiv.classList.add('show');
-  }
-
-  function hideLoader() {
-    loaderDiv.classList.remove('show');
-  }
 function fetchData(){
-    showLoader()
     fetch('https://reqres.in/api/users?page=1').then(data =>{
     if(data.ok){
         console.log('successful')
@@ -18,7 +9,6 @@ function fetchData(){
     return data.json();
     }).then((completedata)=>{
         //   console.log(completedata.data[2].email);
-        hideLoader();
         let data1 = "";
         completedata.data.map((values)=>{
             data1+=`<div class="card">
